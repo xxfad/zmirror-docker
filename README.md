@@ -1,17 +1,19 @@
 # zmirror-docker
-Dockefile for [aploium/zmirror](https://github.com/aploium/zmirror)
-Thanks [aploium/zmirror](https://github.com/aploium/zmirror)
+    
+    Dockefile for [aploium/zmirror](https://github.com/aploium/zmirror)
+    Thanks [aploium/zmirror](https://github.com/aploium/zmirror)
 
 # How-To
 
 ~~~shell
+git clone https://github.com/Reapsn/zmirror-docker.git
 cd zmirror-docker/zmirror-base/
 docker build zmirror-base:latest .
 cd zmirror-docker/
 docker build zmirror:latest .
 ~~~
 
-# Run
+# Run-yml
 
 ~~~yml
 version: '2'
