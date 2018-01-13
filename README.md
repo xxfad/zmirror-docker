@@ -1,2 +1,2 @@
 # zmirror-docker
-Dockefile for zmirror
+Dockefile for [aploium/zmirror](https://github.com/aploium/zmirror)
