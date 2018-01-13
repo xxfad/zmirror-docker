@@ -1,7 +1,7 @@
 # zmirror-docker
     
-    Dockefile for [aploium/zmirror](https://github.com/aploium/zmirror)
-    Thanks [aploium/zmirror](https://github.com/aploium/zmirror)
+- Dockefile for [aploium/zmirror](https://github.com/aploium/zmirror)
+- Thanks [aploium/zmirror](https://github.com/aploium/zmirror)
 
 # How-To
 
