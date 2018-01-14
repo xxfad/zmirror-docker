@@ -39,6 +39,7 @@ deploy() {
     fi    
 
     cp -rf zmirror/ ${HOST_ABBREVIATION}
+    chown -R www-data:www-data ${HOST_ABBREVIATION}/
     cd ${HOST_ABBREVIATION}/
     cp more_configs/config_${HOST_ABBREVIATION}.py config.py
     cp more_configs/custom_func_${HOST_ABBREVIATION:0:5}*.py custom_func.py >/dev/null 2>&1
@@ -103,5 +104,5 @@ fi
 
 service apache2 start
 
-tail -f /var/log/apache2/access.log
+tail -f /var/log/apache2/error.log
 
