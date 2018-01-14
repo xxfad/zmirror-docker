@@ -9,7 +9,7 @@
 git clone https://github.com/Reapsn/zmirror-docker.git
 cd zmirror-docker/zmirror-runtime/
 docker build zmirror-runtime:latest .
-cd zmirror-docker/
+cd ..
 docker build zmirror:latest .
 ~~~
 
