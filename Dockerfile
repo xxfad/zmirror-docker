@@ -1,4 +1,4 @@
-FROM zmirror-base
+FROM zmirror-runtime
     
 ADD cert/ /cert
 ADD sites-available/ /etc/apache2/sites-available
