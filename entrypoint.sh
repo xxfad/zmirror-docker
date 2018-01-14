@@ -18,9 +18,6 @@ ENABLED=false
 # 转小写
 IS_BEHIND_PROXY=$(echo   ${IS_BEHIND_PROXY}   |   tr   [A-Z]   [a-z])
 
-# 清理 sites-enabled
-rm -rf /etc/apache2/sites-enabled/*
-
 # 定义部署函数
 
 deploy() {
@@ -35,8 +32,14 @@ deploy() {
     echo 
     
     cd /var/www/
-    cp -rf zmirror/ "${HOST_ABBREVIATION}"
-    cd "${HOST_ABBREVIATION}/"
+    
+    # 已经部署好，直接跳过
+    if [ -d ${HOST_ABBREVIATION}/ ]; then
+        return
+    fi    
+
+    cp -rf zmirror/ ${HOST_ABBREVIATION}
+    cd ${HOST_ABBREVIATION}/
     cp more_configs/config_${HOST_ABBREVIATION}.py config.py
     cp more_configs/custom_func_${HOST_ABBREVIATION:0:5}*.py custom_func.py >/dev/null 2>&1
     sed -i "s/my_host_name = '127.0.0.1'/my_host_name = '${HOST_NAME}'/g" config.py
